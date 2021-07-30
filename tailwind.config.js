@@ -23,7 +23,18 @@ module.exports = {
 			'2xl': '1400px',
 			'3xl': '1700px'
 		},
-		extend: {},
+		extend: {
+			backgroundImage: theme => ({
+				'link-arrow-black': "url('/img/arrow/arrow-black.svg')",
+				'link-arrow-blue': "url('/img/arrow/arrow-blue.svg')",
+				'link-arrow-white': "url('/img/arrow/arrow-white.svg')",
+			}),
+			zIndex: {
+				'-1':'-1',
+				'-2':'-2',
+				'-3':'-3',
+			},
+		},
 	},
 	variants: {
 		extend: {},
