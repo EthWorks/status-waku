@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="assets/css/styles.css" rel="stylesheet" />
+		<title>Waku</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,500&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="font-body">
+		<header class="flex justify-between items-center px-6 py-4 bg-white">
+			<a href="">
+				<img src="./img/logo.svg" alt="">
+			</a>
+			<div class="flex flex-col justify-center items-center h-8 w-8">
+				<span class="block bg-gray w-7 h-0.5"></span>
+				<span class="block bg-gray w-7 h-0.5 my-2"></span>
+				<span class="block bg-gray w-7 h-0.5"></span>
+			</div>
+		</header>
+		<main>
+			<!-- Hero -->
+			<div class="container max-w-screen-xl mx-auto">
+			<section class="flex flex-col items-center bg-gray py-8 px-6 md:flex-row md:px-16 py-20 lg:px-32 lg:py-36">
+				<div class="mb-10 min-w-max md:mb-0 md:mr-12 lg:mr-32">
+					<img src="./img/symbol-pink.svg" alt="">
+				</div>
+				<div class="lg:max-w-2xl">
+					<h1 class="font-special font-medium text-white text-2xl">
+						<span class="text-pink font-bold">Waku</span> is a modular, privacy-preserving, peer-to-peer messaging protocol designed for resource restricted devices.
+					</h1>
+					<a class="block pl-3 mt-8 text-blue text-xs lg:mt-16" href="">Try WAKU</a>
+				</div>
+			</section>
+			<!--	What is waku -->
+				<section class="bg-pink py-10 px-6 md:flex md:p-0">
+					<div class="flex items-center justify-center md:w-4/12 md:bg-white md:justify-start md:pl-16 lg:pl-32">
+						<h2 class="font-special text-2xl md:w-28">What is Waku?</h2>
+					</div>
+					<div class="mt-10 md:w-8/12 md:px-16 md:py-11 md:mt-0 lg:px-28">
+						<p class="text-sm mb-8 leading-relaxed md:max-w-sm lg:max-w-none">Waku is a fork of the p2p Whisper protocol designed for <b>greater scalability.</b> </p>
+						<p class="text-sm mb-8 leading-relaxed md:max-w-sm lg:max-w-none">Waku is a gossip based protocol that <b>removes centralized third parties</b> from our messaging and enables private, secure, censorship communication. </p>
+						<p class="text-sm mb-8 leading-relaxed md:max-w-sm lg:max-w-none">Waku is designed for <b>generalized messaging,</b> enabling both human-to-human or machine-to-machine communication.</p>
+						<a class="block text-blue text-xs pl-3" href="">Learn more about Waku</a>
+					</div>
+				</section>
+				<!--	How it works -->
+				<section class="py-10 px-6 md:flex md:p-0">
+					<div class="flex items-center justify-center md:justify-start md:w-4/12 md:pl-16 lg:pl-32">
+						<h2 class="font-special text-2xl md:w-28">How it works?</h2>
+					</div>
+					<div class="mt-10 md:w-8/12 md:pr-16 md:py-11 md:mt-0">
+						<p class="text-sm font-bold mb-8 leading-relaxed">Waku implements PubSub over libp2p and adds capabilities on top of it. These capabilities are:</p>
+						<ul class="text-sm mb-8 leading-relaxed">
+							<li>1. Retrieving historical messages for mostly-offline devices.</li>
+							<li>2. Adaptive nodes, allowing for heterogeneous nodes to contribute.</li>
+							<li>3. Bandwidth preservation for light nodes. This makes it ideal for running a p2p protocol on mobile and in similarly restricted environments.</li>
+						</ul>
+						<p class="text-sm mb-8 leading-relaxed md:max-w-sm lg:max-w-none">This makes it ideal for running a p2p protocol on mobile and in similarly restricted environments.</p>
+						<a class="block text-blue text-xs pl-3" href="">Learn more about Waku</a>
+					</div>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>
