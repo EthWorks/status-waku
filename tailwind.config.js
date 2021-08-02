@@ -13,7 +13,8 @@ module.exports = {
 			green: '#18B088',
 			pink: '#FDB4C4',
 			gray: '#242424',
-			grayLight: 'rgba(21, 21, 18, 0.02)'
+			gray75: 'rgba(21, 21, 18, 0.75)',
+			gray02: 'rgba(21, 21, 18, 0.02)',
 		},
 		screens: {
 			'none': '100%',
