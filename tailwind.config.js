@@ -13,6 +13,7 @@ module.exports = {
 			green: '#18B088',
 			pink: '#FDB4C4',
 			gray: '#242424',
+			grayLight: 'rgba(21, 21, 18, 0.02)'
 		},
 		screens: {
 			'none': '100%',
@@ -28,6 +29,7 @@ module.exports = {
 				'link-arrow-black': "url('/img/arrow/arrow-black.svg')",
 				'link-arrow-blue': "url('/img/arrow/arrow-blue.svg')",
 				'link-arrow-white': "url('/img/arrow/arrow-white.svg')",
+				'branch': "url('/img/branch.svg')",
 			}),
 			zIndex: {
 				'-1':'-1',
