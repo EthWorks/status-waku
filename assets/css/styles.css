@@ -17562,6 +17562,10 @@ video {
           animation: bounce 1s infinite;
 }
 
+.search-input {
+  width: calc(100% - 80px);
+}
+
 @media (min-width: 100%) {
   .none\:container {
     width: 100%;
