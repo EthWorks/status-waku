@@ -33,6 +33,9 @@ module.exports = {
 				'link-arrow-white': "url('/img/arrow/arrow-white.svg')",
 				'branch': "url('/img/branch.svg')",
 			}),
+			fontSize: theme => ({
+				'10': '.625rem'
+			}),
 			zIndex: {
 				'-1':'-1',
 				'-2':'-2',
