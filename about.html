@@ -68,7 +68,8 @@
 <main>
   <div class="container max-w-screen-xl mx-auto">
     <!-- Hero -->
-    <section class="flex flex-col items-center bg-pink py-8 px-6 md:flex-row md:px-16 md:py-28 lg:px-32 lg:py-36">
+    <section class="relative flex flex-col items-center bg-pink py-8 px-6 md:flex-row md:px-16 md:py-28 lg:px-32 lg:py-36">
+      <a class="absolute top-4 left-10 hidden text-xs text-gray pl-3 mt-6 hover:underline lg:flex lg:items-center" href=""><span class="block bg-link-arrow-black bg-left bg-no-repeat w-1.5 h-2 mr-1.5 transform rotate-180"></span>Back</a>
       <div class="mb-10 min-w-max md:mb-0 md:mr-12 lg:mr-32">
         <svg class="w-48 h-48 text-gray">
           <use href="#logo"/>
@@ -114,7 +115,54 @@
         </div>
       </div>
     </section>
-
+    <!--	History -->
+    <section class="px-6 mt-10 md:px-16 md:mt-20 lg:px-16 lg:mt-32 xl:px-0">
+      <div class="pb-16 md:pb-24 lg:flex lg:pb-36 lg:px-16 xl:px-32">
+        <div class="mb-10 md:mb-6 lg:mb-0 lg:w-1/5 lg:flex">
+          <h2 class="font-special font-semibold leading-10 text-2xl md:text-center lg:text-left lg:w-36">History</h2>
+        </div>
+        <div class="lg:w-4/5 lg:pl-6 xl:pl-0">
+          <p class="text-sm font-semibold mb-8 leading-7 md:text-center md:mb-6 lg:text-left lg:mb-12">Waku is a fork of the Whisper protocol designed to solve some of the issues of Whisper in an iterative fashion and enable greater scalability.</p>
+          <div class="grid grid-cols-1 gap-y-8">
+            <div class="relative flex items-center">
+              <div class="absolute top-1/2 left-8 h-full w-px bg-light"></div>
+              <div class="inline-flex flex-col items-center justify-center bg-blue rounded-full min-w-max w-16 h-16 mr-10 z-10">
+                <span class="text-white">2013</span>
+              </div>
+              <p class="text-sm w-8/12">Ethereum White Paper was introduced with the Holy Trinity, consisting of Ethereum for consensu, Swarm for decentralized storage, and Whisper for p2p messaging.</p>
+            </div>
+            <div class="relative flex items-center">
+              <div class="absolute top-1/2 left-8 h-full w-px bg-light"></div>
+              <div class="inline-flex flex-col items-center justify-center bg-blue rounded-full min-w-max w-16 h-16 mr-10 z-10">
+                <span class="text-white">2015</span>
+                <span class="text-white">2018</span>
+              </div>
+              <p class="text-sm w-8/12">R&D of Whisper was slow to follow progress of the Ethereum EVM and Swarm without a dedicated team building out the protocol.</p>
+            </div>
+            <div class="relative flex items-center">
+              <div class="absolute top-1/2 left-8 h-full w-px bg-light"></div>
+              <div class="inline-flex flex-col items-center justify-center bg-blue rounded-full min-w-max w-16 h-16 mr-10 z-10">
+                <span class="text-white">2018</span>
+              </div>
+              <p class="text-sm w-8/12">With little progress made on Whisper and significant scalability concerns growing, Vac was formed to conduct R&D on more scalable p2p messaging.</p>
+            </div>
+            <div class="relative flex items-center">
+              <div class="absolute top-1/2 left-8 h-full w-px bg-light"></div>
+              <div class="inline-flex flex-col items-center justify-center bg-blue rounded-full min-w-max w-16 h-16 mr-10 z-10">
+                <span class="text-white">2020</span>
+              </div>
+              <p class="text-sm w-8/12">Waku v1 was introduced as the messaging protocol in Status, replacing Whisper.</p>
+            </div>
+            <div class="relative flex items-center">
+              <div class="inline-flex flex-col items-center justify-center bg-blue rounded-full min-w-max w-16 h-16 mr-10 z-10">
+                <span class="text-white">2021</span>
+              </div>
+              <p class="text-sm w-8/12">Waku v2 replaces Waku v1 (details)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </main>
 
