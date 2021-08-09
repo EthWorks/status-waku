@@ -81,12 +81,12 @@
       </div>
     </section>
     <!-- Types of nodes -->
-    <section class="px-6 mt-10 mb-8 md:px-16 md:mt-20 lg:px-16 lg:mt-32 xl:px-0">
-      <div class="border-b border-gray pb-16 md:pb-24 lg:flex lg:pb-36 lg:px-16 xl:px-32">
-        <div class="mb-10 md:mb-6 lg:mb-0 lg:w-1/5 lg:flex lg:items-center">
-          <h2 class="font-special font-semibold leading-10 text-2xl md:text-center lg:text-left lg:w-36">Types of nodes</h2>
+    <section class="px-6 mt-10 mb-10 md:px-16 md:mt-20 lg:my-32 xl:px-0">
+      <div class="border-b border-gray pb-16 md:pb-20 md:flex lg:pb-32 lg:px-16 xl:px-32">
+        <div class="mb-10 md:w-4/12 md:mb-6 lg:mb-0 lg:w-1/5 lg:flex lg:items-center">
+          <h2 class="font-special font-semibold leading-10 text-2xl text-center text-gray md:text-left md:w-36 lg:text-left">Types of nodes</h2>
         </div>
-        <div class="lg:w-4/5 lg:pl-6 xl:pl-0">
+        <div class="md:w-8/12 lg:w-4/5 lg:pl-6 xl:pl-0">
           <div class="grid grid-cols-1 gap-y-8 md:gap-y-6 lg:grid-cols-2 lg:gap-y-12 lg:gap-x-5">
             <div>
               <h3 class="text-sm font-semibold text-gray mb-4">relay node</h3>
@@ -100,9 +100,154 @@
         </div>
       </div>
     </section>
+    <!-- Running A Status Node -->
+    <section class="px-6 mb-20 md:px-16 lg:mb-32">
+      <h2 class="font-special font-semibold leading-10 text-2xl text-center text-gray mb-10">Running A Status Node</h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-sm text-gray font-semibold leading-7 mb-10 md:text-center">
+          Status Node is a modified <span class="text-blue">go-ethereum</span> node called <span class="text-blue">status-go</span> running on a server and supporting the Status app.
+          As we operate in a decentralized model, we need multiple peers scattered around the globe to provide a reliable service.
+        </p>
+        <p class="text-sm text-gray font-semibold leading-7 md:text-center">
+          When correctly configured a Status Node supports relaying Waku messages - helps propagate them between nodes
+          - and storing them for devices that were offline when it was sent.
+        </p>
+      </div>
+    </section>
+    <!-- Requirements -->
+    <section class="px-6 mb-20 md:px-16 lg:flex lg:px-32 lg:mb-32">
+      <div class="mb-6 md:mb-0 lg:max-w-lg">
+        <h2 class="font-special font-semibold leading-10 text-2xl text-center text-gray mb-10 md:text-left lg:mb-4">Requirements</h2>
+        <p class="text-sm text-gray leading-7 mb-10 text-justify">A machine running Linux or MacOS is required. It is entirely possible to run a Status Node on a physical machine in a local network, but for full functionality it would require a public and static IP address via which the service can be accessed.</p>
+        <p class="text-sm text-gray leading-7 mb-10 text-justify">An alternative would be to use a <span class="text-blue">cloud service provider</span> which would provide you with a public and static IP out of the box in most cases. Using a cloud service would also provide you with the high uptime necessary to collect as many envelopes as possible for later retrieval.</p>
+        <p class="text-sm text-gray font-semibold leading-7 text-justify">A single instance with 1GB of RAM and 1 vCPU should be enough to run Status Node reliably.</p>
+      </div>
+      <div class="md:px-11 lg:px-0 lg:pl-14 lg:max-w-xl">
+        <div class="bg-gray px-4 py-6 md:p-8 lg:py-12">
+          <p class="text-sm text-white mb-2.5 leading-9">
+            In terms of software the minimum would include <span class="inline-block bg-black py-1 px-2 rounded leading-none">make</span> and <span class="inline-block bg-black py-1 px-2 rounded leading-none">jq</span>.<br>
+            If you want to build <span class="inline-block bg-black py-1 px-2 rounded leading-none">status-go</span> you will also need <span class="inline-block bg-black py-1 px-2 rounded leading-none">golang</span>,
+            version 1.13 or higher. A nice-to-have is <span class="inline-block bg-black py-1 px-2 rounded leading-none">qrencode</span>
+            to display a QR Code with your <span class="inline-block bg-black py-1 px-2 rounded leading-none">enode://</span> adress.
+          </p>
+          <div class="mx-auto mt-10 pt-10 border-t border-grayDark">
+            <p class="text-sm text-white text-center mb-4 leading-7">For Ubuntu <span class="inline-block bg-black py-1 px-2 mx-2 rounded leading-none">20.04</span> you can just do:</p>
+            <div class="px-7">
+              <div class="text-sm text-white leading-7 bg-black p-4 rounded text-justify">
+                <span class="text-blue02">sudo</span> apt install make jq golang qrencode
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Ports -->
+    <section class="px-6 mb-20 lg:px-32 lg:mb-32">
+      <h2 class="font-special font-semibold leading-10 text-2xl text-center text-gray mb-10">Ports</h2>
+      <div class="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-4 lg:gap-12">
+        <div class="flex flex-col items-center bg-pink p-4">
+          <h3 class="font-special text-sm w-max bg-black py-1 px-2 mx-2 mb-4 text-white rounded leading-none">30303</h3>
+          <p class="text-sm text-gray text-center leading-7 mb-4">TCP - JSON RPC management port. </p>
+          <p class="text-sm text-gray leading-7 font-semibold pl-7 bg-eye-open-black bg-left bg-no-repeat">Must ALWAYS be public.</p>
+        </div>
 
+        <div class="flex flex-col items-center bg-green p-4">
+          <h3 class="font-special text-sm w-max bg-black py-1 px-2 mx-2 mb-4 text-white rounded leading-none">8545</h3>
+          <p class="text-sm text-white text-center leading-7 mb-4">TCP/UDP - DevP2P wire protocol port.</p>
+          <p class="text-sm text-white leading-7 font-semibold pl-7 bg-eye-close-white bg-left bg-no-repeat">Must ALWAYS be public.</p>
+        </div>
 
+        <div class="flex flex-col items-center bg-blue p-4">
+          <h3 class="font-special text-sm w-max bg-black py-1 px-2 mx-2 mb-4 text-white rounded leading-none">9090</h3>
+          <p class="text-sm text-white text-center leading-7 mb-4">TCP - Prometheus metrics port.</p>
+          <p class="text-sm text-white leading-7 font-semibold pl-7 bg-eye-close-white bg-left bg-no-repeat">Should not be public.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Quick Start -->
+    <section class="px-6 mb-20 md:px-16 lg:mb-32">
+      <div class="pb-20 border-b border-gray lg:pb-32">
+        <h2 class="font-special font-semibold leading-10 text-2xl text-center text-gray mb-10">Quick Start</h2>
+        <div class="max-w-3xl mx-auto">
+          <p class="text-sm text-gray text-center font-semibold leading-7">
+            The quickest way to start a node is using our Makefile scripts. You can read about that <a class="text-blue" href="">here</a>.
+          </p>
+          <p class="text-sm text-gray text-center font-semibold leading-7 mb-6">
+            In simple terms you clone the <a class="text-blue" href="">status-go</a> repo and run:
+          </p>
 
+          <div class="flex flex-col items-center md:flex-row md:justify-center">
+            <span class="text-sm inline-block bg-black font-special text-white p-4 rounded leading-none">make run-mailserver-docker</span>
+            <span class="text-sm my-2 md:my-0 md:mx-6">or</span>
+            <span class="text-sm inline-block bg-black font-special text-white p-4 rounded leading-none">make run-mailserver-systemd</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Build -->
+    <section class="px-6 mb-10 md:px-16 md:mb-12">
+      <div class="border-gray300 md:border-b md:pb-12 md:flex md:justify-between">
+        <div>
+          <h2 class="font-special font-semibold leading-10 text-2xl text-gray mb-4">Building</h2>
+          <p class="mb-5 text-sm text-gray leading-7">First you’ll have to build a <span class="inline-block bg-black py-1 px-2 rounded leading-none text-white font-special">20.04</span> binary.</p>
+        </div>
+        <div class="md:w-22 md:min-w-22r lg:w-34r lg:min-w-34r">
+          <div class="bg-black rounded p-4">
+<pre>
+  <code class="font-body text-white text-sm leading-7">mkdir ~/go/src/github.com/status-im
+  git clone https://github.com/status-im/status-go
+  ~/go/src/github.com/status-im/status-go
+  cd ~/go/src/github.com/status-im/status-go
+  make statusgo</code>
+</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Running -->
+    <section class="px-6 mb-10 md:px-16 md:mb-12">
+      <div class="border-gray300 md:border-b md:pb-12 md:flex md:justify-between">
+        <div class="max-w-14-5r lg:w-6/12 xl:max-w-none">
+          <h2 class="font-special font-semibold leading-10 text-2xl text-gray mb-4">Running</h2>
+          <p class="mb-5 text-sm text-gray leading-7">You can check the available options using the <span class="inline-block bg-black py-1 px-2 rounded leading-none text-white font-special">-h</span> / <span class="inline-block bg-black py-1 px-2 rounded leading-none text-white font-special">--help</span> flags</p>
+        </div>
+        <div class="md:w-22 md:min-w-22r lg:w-34r lg:min-w34r lg:p-0">
+          <div class="bg-black rounded p-4">
+            <pre><code class="font-body text-white text-sm leading-7">./build/bin/statusd -h</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Configuration -->
+    <section class="px-6 mb-10 md:px-16 md:mb-12 lg:mb-32">
+      <div class="md:flex md:justify-between">
+        <div class="max-w-14-5r lg:w-6/12 xl:max-w-none">
+          <h2 class="font-special font-semibold leading-10 text-2xl text-gray mb-4">Configuration</h2>
+          <p class="mb-5 text-sm text-gray leading-7">The configuration is provided as a JSON file. A basic config that will let you run a Waku node that also stores historical messages would look like this: <span class="inline-block bg-black py-1 px-2 rounded leading-none text-white font-special">./config.json</span></p>
+        </div>
+        <div class="md:w-22 md:min-w-22r lg:w-34r lg:min-w34r lg:p-0">
+          <div class="bg-black rounded p-4">
+            <pre class="block"><code class="font-body text-white text-sm leading-7">
+{
+    <span class="text-red">"AdvertiseAddr"</span>: <span class="text-yellow">"< YOUR_PUBLIC_IP >"</span>,
+    <span class="text-red">"ListenAddr"</span>: <span class="text-yellow">"0.0.0.0:30303"</span>,
+    <span class="text-red">"HTTPEnabled"</span>: <span class="text-purple">true</span>,
+    <span class="text-red">"HTTPHost"</span>: <span class="text-yellow">"127.0.0.1"</span>,
+    <span class="text-red">"HTTPPort"</span>: <span class="text-purple">8545</span>,
+    <span class="text-red">"APIModules"</span>: <span class="text-yellow">"eth,net,web3,admin,mailserver"</span>,
+    <span class="text-red">"RegisterTopics"</span>: [<span class="text-yellow">"whispermail"</span>],
+    <span class="text-red">"WakuConfig"</span>: {
+      <span class="text-red">"Enabled"</span>: <span class="text-purple">true</span>,
+      <span class="text-red">"EnableMailServer"</span>: <span class="text-purple">true</span>,
+      <span class="text-red">"DataDir"</span>: <span class="text-yellow">"/var/tmp/statusd/waku"</span>,
+      <span class="text-red">"MailServerPassword"</span>: <span class="text-yellow">"status-offline-inbox"</span>
+    }
+}</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </main>
 
