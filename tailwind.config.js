@@ -44,6 +44,10 @@ module.exports = {
 			fontSize: theme => ({
 				'10': '.625rem'
 			}),
+			gridTemplateColumns: theme => ({
+				'footer-md': '1fr 2.5fr',
+				'footer-xl': '40px 207px 1fr 0.65fr'
+			}),
 			height: theme => ({
 				'18': '4.5rem',
 				'26': '6.5rem',
