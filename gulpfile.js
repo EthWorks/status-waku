@@ -13,8 +13,8 @@ function cssTask(cb) {
 	cb();
 }
 
-function scripts(cb) {
-	return src(['src/*.js',])
+function scriptsTask(cb) {
+	return src('./src/*.js')
 		.pipe(uglify())
 		.pipe(dest('./dist/js'))
 		.pipe(browserSync.stream());
@@ -23,9 +23,15 @@ function scripts(cb) {
 
 // Task for minifying images
 function imageminTask(cb) {
-	return src("./dist/images/*")
+	return src('./img/**/*')
 		.pipe(imagemin())
-		.pipe(dest("./dist/images"));
+		.pipe(dest("./dist/img"));
+	cb();
+}
+
+function htmlBuild(cb) {
+	return src("./*.html") // read .css files from ./src/ folder
+		.pipe(dest("./dist")) // paste them in ./dist/css folder
 	cb();
 }
 
@@ -47,12 +53,12 @@ function browsersyncReload(cb) {
 function watchTask() {
 	watch("./**/*.html", browsersyncReload);
 	watch(["./src/*.css"], series(cssTask, browsersyncReload));
-	watch(["./src/*.js"], series(scripts, browsersyncReload));
+	watch(["./src/*.js"], series(scriptsTask, browsersyncReload));
 }
 
 // Default Gulp Task
-exports.default = series(cssTask, browsersyncServe, watchTask);
+exports.build = series(cssTask, scriptsTask, imageminTask, htmlBuild);
+exports.default = series(cssTask, scriptsTask, imageminTask, htmlBuild, browsersyncServe, watchTask);
 exports.css = cssTask;
 exports.images = imageminTask;
-exports.scripts = scripts;
 
