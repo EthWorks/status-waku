@@ -8,7 +8,7 @@ const uglify = require('gulp-uglify-es').default;
 function cssTask(cb) {
 	return src("./src/*.css") // read .css files from ./src/ folder
 		.pipe(postcss()) // compile using postcss
-		.pipe(dest("./assets/css")) // paste them in ./assets/css folder
+		.pipe(dest("./dist/css")) // paste them in ./dist/css folder
 		.pipe(browserSync.stream());
 	cb();
 }
@@ -16,16 +16,16 @@ function cssTask(cb) {
 function scripts(cb) {
 	return src(['src/*.js',])
 		.pipe(uglify())
-		.pipe(dest('./assets/js'))
+		.pipe(dest('./dist/js'))
 		.pipe(browserSync.stream());
 	cb();
 }
 
 // Task for minifying images
 function imageminTask(cb) {
-	return src("./assets/images/*")
+	return src("./dist/images/*")
 		.pipe(imagemin())
-		.pipe(dest("./assets/images"));
+		.pipe(dest("./dist/images"));
 	cb();
 }
 
