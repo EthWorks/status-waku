@@ -34,12 +34,12 @@ module.exports = {
 		},
 		extend: {
 			backgroundImage: theme => ({
-				'link-arrow-black': "url('./img/arrow/arrow-black.svg')",
-				'link-arrow-blue': "url('./img/arrow/arrow-blue.svg')",
-				'link-arrow-white': "url('./img/arrow/arrow-white.svg')",
-				'branch': "url('./img/branch.svg')",
-				'eye-open-black': "url('./img/icon/eye-open-black.svg')",
-				'eye-close-white': "url('./img/icon/eye-close-white.svg')",
+				'link-arrow-black': "url('../img/arrow/arrow-black.svg')",
+				'link-arrow-blue': "url('../img/arrow/arrow-blue.svg')",
+				'link-arrow-white': "url('../img/arrow/arrow-white.svg')",
+				'branch': "url('../img/branch.svg')",
+				'eye-open-black': "url('../img/icon/eye-open-black.svg')",
+				'eye-close-white': "url('../img/icon/eye-close-white.svg')",
 			}),
 			fontSize: theme => ({
 				'10': '.625rem'
