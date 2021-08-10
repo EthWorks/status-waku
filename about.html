@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body class="font-body">
-<header class="relative z-50">
-  <div class="bg-gray">
+<header class="fixed inset-x-0 z-50 bg-white">
+  <div class="bg-gray ">
     <div class="max-w-screen-md mx-auto flex justify-between items-center py-1 px-2 md:px-6">
       <p class="text-10 text-white bg-branch bg-left bg-no-repeat pl-3">master</p>
       <p class="text-10 text-white">v2.0.0</p>
@@ -19,13 +19,13 @@
     </div>
   </div>
 
-  <div class="max-w-screen-xl flex justify-between items-center mx-auto px-6 py-4 bg-white md:py-8 xl:px-0">
-    <a class="text-gray" href="">
+  <div class="h-18 max-w-screen-xl flex justify-between items-center mx-auto px-6 py-4  md:h-26 md:py-8 lg:px-0">
+    <a id="header-logo" class="text-gray" href="">
       <svg class="w-10 h-10">
         <use href="#logo"/>
       </svg>
     </a>
-    <nav class="absolute hidden items-center justify-end -z-1 top-0 left-0 h-screen w-full bg-gray pt-16 pr-16 md:bg-white md:relative md:h-auto md:p-0 md:justify-center md:z-0">
+    <nav id="nav" class="absolute flex items-center justify-end -z-1 top-0 left-0 h-screen w-full bg-gray pt-16 pr-16 transform -translate-y-full md:-translate-y-0 md:bg-white md:relative md:h-auto md:p-0 md:justify-center md:z-0">
       <div class="text-pink md:hidden">
         <svg class="w-60 h-60 transform -translate-x-6">
           <use href="#logo"/>
@@ -33,15 +33,15 @@
       </div>
       <ul class="text-right text-white md:flex md:text-gray md:text-center">
         <li class="mb-8 md:w-16 md:mb-0 lg:w-24"><a class="font-special font-medium text-2xl md:font-body md:text-xs md:hover:underline md:hover:text-blue" href="">Home</a></li>
-        <li class="mb-8 md:w-16 md:mb-0 lg:w-24"><a class="font-special font-medium text-2xl md:font-body md:text-xs md:hover:underline md:hover:text-blue" href="">About</a></li>
-        <li class="mb-8 md:w-16 md:mb-0 lg:w-24"><a class="font-special font-medium text-2xl md:font-body md:text-xs md:hover:underline md:hover:text-blue" href="">Try</a></li>
-        <li class="mb-8 md:w-16 md:mb-0 lg:w-24"><a class="font-special font-medium text-2xl md:font-body md:text-xs md:hover:underline md:hover:text-blue" href="">Blog</a></li>
+        <li class="mb-8 md:w-16 md:mb-0 lg:w-24"><a class="font-special font-medium text-2xl md:font-body md:text-xs md:hover:underline md:hover:text-blue" href="/about.html">About</a></li>
+        <li class="mb-8 md:w-16 md:mb-0 lg:w-24"><a class="font-special font-medium text-2xl md:font-body md:text-xs md:hover:underline md:hover:text-blue" href="/node.html">Try</a></li>
+        <li class="mb-8 md:w-16 md:mb-0 lg:w-24"><a class="font-special font-medium text-2xl md:font-body md:text-xs md:hover:underline md:hover:text-blue" href="/blog.html">Blog</a></li>
         <li class="mb-8 md:w-16 md:mb-0 lg:w-24"><a class="font-special font-medium text-2xl md:font-body md:text-xs md:hover:underline md:hover:text-blue" href="">Team</a></li>
         <li class="mb-8 md:w-16 md:mb-0 lg:w-24"><a class="font-special font-medium text-2xl md:font-body md:text-xs md:hover:underline md:hover:text-blue" href="">Support</a></li>
         <li class="mb-8 md:w-16 md:mb-0 lg:w-24"><a class="font-special font-medium text-2xl md:font-body md:text-xs md:hover:underline md:hover:text-blue" href="">Specs</a></li>
       </ul>
     </nav>
-    <div class="hidden md:flex">
+    <div id="social-box" class="hidden md:flex">
       <a class="text-gray mr-6 hover:text-blue" href="">
         <svg class="fill-current" width="17" height="16" viewBox="0 0 17 16" fill="none">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M8.91602 0C13.3343 0 16.916 3.58173 16.916 8C16.916 12.4183 13.3343 16 8.91602 16C4.49774 16 0.916016 12.4183 0.916016 8C0.916016 3.58173 4.49774 0 8.91602 0ZM5.95621 12.2212C5.95621 12.2212 6.35922 11.7728 6.64917 11.3774C5.25253 10.982 4.72597 10.191 4.72597 10.191C6.17809 11.0888 7.53429 11.4343 8.91602 11.3894C10.2977 11.4342 11.6539 11.0888 13.1059 10.191C13.1059 10.191 12.5795 10.982 11.1827 11.3774C11.4728 11.7729 11.8756 12.2212 11.8756 12.2212C13.8349 12.178 14.8134 11.1899 15.1344 10.8657C15.2059 10.7935 15.2448 10.7542 15.2546 10.7658C15.2546 7.50176 13.6699 4.84403 13.6699 4.84403C12.2518 3.82643 10.9304 3.78413 10.6779 3.77885L10.5168 3.93178C12.327 4.43798 13.2026 5.22896 13.2026 5.22896C11.6489 4.47853 10.1845 4.21456 8.91602 4.19875C7.64747 4.21475 6.18322 4.47853 4.62942 5.22896C4.62942 5.22896 5.50501 4.43798 7.31525 3.93178L7.1541 3.77885C6.90162 3.78413 5.58021 3.8263 4.1621 4.84403C4.1621 4.84403 2.57749 7.5017 2.57749 10.7658C2.58728 10.7542 2.62614 10.7935 2.69765 10.8657L2.69766 10.8657C3.01858 11.1898 3.99704 12.178 5.95621 12.2212ZM10.8665 7.49128V7.486C11.4788 7.486 11.973 7.99224 11.973 8.61445C11.973 9.23665 11.4788 9.74293 10.8665 9.74293C10.2541 9.74293 9.75986 9.23669 9.75986 8.61973C9.75986 7.99746 10.2594 7.49128 10.8665 7.49128ZM6.96642 7.49103V7.48575C6.35404 7.48575 5.85986 7.99196 5.85986 8.6142C5.85986 9.23644 6.35407 9.74268 6.96642 9.74268C7.57878 9.74268 8.07302 9.23644 8.07302 8.61948C8.07302 7.99727 7.57343 7.49103 6.96642 7.49103Z" fill="currentColor"/>
@@ -58,7 +58,7 @@
         </svg>
       </a>
     </div>
-    <div class="flex flex-col justify-center items-center h-8 w-8 md:hidden">
+    <div id="burger" class="flex flex-col justify-center items-center h-8 w-8 md:hidden">
       <span class="block bg-gray w-7 h-0.5"></span>
       <span class="block bg-gray w-7 h-0.5 my-2"></span>
       <span class="block bg-gray w-7 h-0.5"></span>

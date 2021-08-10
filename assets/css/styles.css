@@ -4869,12 +4869,20 @@ video {
   height: 4rem;
 }
 
+.h-18 {
+  height: 4.5rem;
+}
+
 .h-20 {
   height: 5rem;
 }
 
 .h-24 {
   height: 6rem;
+}
+
+.h-26 {
+  height: 6.5rem;
 }
 
 .h-28 {
@@ -19148,6 +19156,32 @@ video {
   width: calc(100% - 80px);
 }
 
+.nav--active {
+  transform: translate(0);
+}
+
+.social--visible {
+  display: flex;
+  z-index: 10;
+}
+
+.social--visible a {
+  color: white;
+}
+
+.social--visible svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.logo--hidden {
+  display: none;
+}
+
+.burger--active span {
+  background-color: #fff;
+}
+
 @media (min-width: 100%) {
   .none\:container {
     width: 100%;
@@ -23467,12 +23501,20 @@ video {
     height: 4rem;
   }
 
+  .none\:h-18 {
+    height: 4.5rem;
+  }
+
   .none\:h-20 {
     height: 5rem;
   }
 
   .none\:h-24 {
     height: 6rem;
+  }
+
+  .none\:h-26 {
+    height: 6.5rem;
   }
 
   .none\:h-28 {
@@ -41983,12 +42025,20 @@ video {
     height: 4rem;
   }
 
+  .sm\:h-18 {
+    height: 4.5rem;
+  }
+
   .sm\:h-20 {
     height: 5rem;
   }
 
   .sm\:h-24 {
     height: 6rem;
+  }
+
+  .sm\:h-26 {
+    height: 6.5rem;
   }
 
   .sm\:h-28 {
@@ -60499,12 +60549,20 @@ video {
     height: 4rem;
   }
 
+  .md\:h-18 {
+    height: 4.5rem;
+  }
+
   .md\:h-20 {
     height: 5rem;
   }
 
   .md\:h-24 {
     height: 6rem;
+  }
+
+  .md\:h-26 {
+    height: 6.5rem;
   }
 
   .md\:h-28 {
@@ -79015,12 +79073,20 @@ video {
     height: 4rem;
   }
 
+  .lg\:h-18 {
+    height: 4.5rem;
+  }
+
   .lg\:h-20 {
     height: 5rem;
   }
 
   .lg\:h-24 {
     height: 6rem;
+  }
+
+  .lg\:h-26 {
+    height: 6.5rem;
   }
 
   .lg\:h-28 {
@@ -97531,12 +97597,20 @@ video {
     height: 4rem;
   }
 
+  .xl\:h-18 {
+    height: 4.5rem;
+  }
+
   .xl\:h-20 {
     height: 5rem;
   }
 
   .xl\:h-24 {
     height: 6rem;
+  }
+
+  .xl\:h-26 {
+    height: 6.5rem;
   }
 
   .xl\:h-28 {
@@ -116047,12 +116121,20 @@ video {
     height: 4rem;
   }
 
+  .\32xl\:h-18 {
+    height: 4.5rem;
+  }
+
   .\32xl\:h-20 {
     height: 5rem;
   }
 
   .\32xl\:h-24 {
     height: 6rem;
+  }
+
+  .\32xl\:h-26 {
+    height: 6.5rem;
   }
 
   .\32xl\:h-28 {
@@ -134563,12 +134645,20 @@ video {
     height: 4rem;
   }
 
+  .\33xl\:h-18 {
+    height: 4.5rem;
+  }
+
   .\33xl\:h-20 {
     height: 5rem;
   }
 
   .\33xl\:h-24 {
     height: 6rem;
+  }
+
+  .\33xl\:h-26 {
+    height: 6.5rem;
   }
 
   .\33xl\:h-28 {

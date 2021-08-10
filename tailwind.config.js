@@ -44,6 +44,10 @@ module.exports = {
 			fontSize: theme => ({
 				'10': '.625rem'
 			}),
+			height: theme => ({
+				'18': '4.5rem',
+				'26': '6.5rem',
+			}),
 			maxWidth: theme => ({
 				'14-5r': '14.5rem',
 				'22r': '22rem',

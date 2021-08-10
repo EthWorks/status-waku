@@ -5,3 +5,29 @@
 .search-input {
     width: calc(100% - 80px);
 }
+
+.nav--active {
+    transform: translate(0);
+}
+
+.social--visible {
+    display: flex;
+    z-index: 10;
+}
+
+.social--visible a {
+    color: white;
+}
+
+.social--visible svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.logo--hidden {
+    display: none;
+}
+
+.burger--active span {
+    background-color: #fff;
+}
