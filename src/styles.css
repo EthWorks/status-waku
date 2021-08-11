@@ -2,32 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-.search-input {
-    width: calc(100% - 80px);
-}
-
 .nav--active {
-    transform: translate(0);
+  @apply transform translate-x-0 translate-y-0;
 }
 
 .social--visible {
-    display: flex;
-    z-index: 10;
+  @apply flex z-10;
 }
 
 .social--visible a {
-    color: white;
+  @apply text-white;
 }
 
 .social--visible svg {
-    width: 1.5rem;
-    height: 1.5rem;
+  @apply w-6 h-6;
 }
 
 .logo--hidden {
-    display: none;
+  @apply hidden;
 }
 
 .burger--active span {
-    background-color: #fff;
+  @apply bg-white;
 }
