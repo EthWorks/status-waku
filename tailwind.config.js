@@ -63,6 +63,10 @@ module.exports = {
 				'22r': '22rem',
 				'34r': '34rem',
 			}),
+			padding: theme => ({
+				'18': '4.5rem',
+				'26': '6.5rem',
+			}),
 			width: theme => ({
 				'22r': '22rem',
 				'34r': '34rem',
