@@ -42,8 +42,12 @@ module.exports = {
 				'eye-open-black': "url('../img/icon/eye-open-black.svg')",
 				'eye-close-white': "url('../img/icon/eye-close-white.svg')",
 			}),
+			borderWidth: theme => ({
+				'thin': '.25px',
+			}),
 			fontSize: theme => ({
-				'10': '.625rem'
+				'10': '.625rem',
+				'32': ['32px', '42px']
 			}),
 			gridTemplateColumns: theme => ({
 				'footer-md': '1fr 2.5fr',
@@ -66,6 +70,9 @@ module.exports = {
 			padding: theme => ({
 				'18': '4.5rem',
 				'26': '6.5rem',
+			}),
+			margin: theme => ({
+				'25': '6.25rem',
 			}),
 			width: theme => ({
 				'22r': '22rem',
