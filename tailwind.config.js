@@ -70,6 +70,7 @@ module.exports = {
 			padding: theme => ({
 				'18': '4.5rem',
 				'26': '6.5rem',
+				'30': '7.5rem',
 			}),
 			margin: theme => ({
 				'25': '6.25rem',
