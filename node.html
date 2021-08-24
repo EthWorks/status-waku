@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./css/styles.css" rel="stylesheet" />
+  <link href="./dist/css/styles.css" rel="stylesheet" />
   <title>Waku</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,7 @@
 </head>
 <body class="font-body">
 
-<<header class="fixed inset-x-0 z-50 bg-white">
+<header class="fixed inset-x-0 z-50 bg-white">
   <div class="h-18 max-w-screen-xl flex justify-between items-center mx-auto px-6 py-4  md:h-26 md:py-8 lg:px-0">
     <a id="header-logo" class="text-gray" href="/index.html">
       <svg class="w-10 h-10">
@@ -75,39 +75,48 @@
       </div>
     </section>
     <!-- Types of nodes -->
-    <section class="px-6 mt-10 mb-10 md:px-16 md:mt-20 lg:my-32 xl:px-0">
-      <div class="border-b border-gray pb-16 md:pb-20 md:flex lg:pb-32 lg:px-16 xl:px-32">
-        <div class="mb-10 md:w-4/12 md:mb-6 lg:mb-0 lg:w-1/5 lg:flex">
-          <h2 class="font-special font-semibold leading-10 text-2xl text-center text-gray md:text-left md:w-36 lg:text-left">Types of nodes</h2>
+    <section class="px-6 lg:px-0">
+      <div class="flex flex-col pt-20 pb-24 border-b-thin border-gray md:flex-row lg:pt-24 lg:pb-14">
+        <div class="mb-10 md:mb-6 lg:mb-0 md:w-4/12 md:pr-4 lg:pl-28 lg:pr-0">
+          <h2 class="text-2xl text-gray font-semibold max-w-2xl">Types of node</h2>
         </div>
-        <div class="md:w-8/12 lg:w-4/5 lg:pl-6 xl:pl-0">
-          <div class="grid grid-cols-1 gap-y-8 md:gap-y-6 lg:grid-cols-2 lg:gap-y-12 lg:gap-x-5">
-            <div>
-              <h3 class="text-sm font-semibold text-gray mb-4">relay node</h3>
-              <p class="text-sm text-gray leading-7">A regular Waku Node which relays messages between nodes, including mobile or desktop clients.</p>
-            </div>
-            <div>
-              <h3 class="text-sm font-semibold text-gray mb-4">history node</h3>
-              <p class="text-sm text-gray leading-7">Also known as a Mailserver, stores historical messages and delivers them when queried. Around 1 GB of free space would be a start for storing last 30 days.</p>
-            </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:w-8/12 lg:gap-9">
+          <div>
+            <h3 class="text-sm font-semibold text-gray mb-4">relay node</h3>
+            <p class="text-sm text-gray leading-7">A regular Waku Node which relays messages between nodes, including mobile or desktop clients.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-gray mb-4">history node</h3>
+            <p class="text-sm text-gray leading-7">Also known as a Mailserver, stores historical messages and delivers them when queried. Around 1 GB of free space would be a start for storing last 30 days.</p>
           </div>
         </div>
       </div>
     </section>
     <!-- Running A Status Node -->
-    <section class="px-6 mb-20 md:px-16 lg:mb-32">
-      <h2 class="font-special font-semibold leading-10 text-2xl text-center text-gray mb-10">Running A Status Node</h2>
-      <div class="max-w-3xl mx-auto">
-        <p class="text-sm text-gray font-semibold leading-7 mb-10 md:text-center">
-          Status Node is a modified <span class="text-blue">go-ethereum</span> node called <span class="text-blue">status-go</span> running on a server and supporting the Status app.
-          As we operate in a decentralized model, we need multiple peers scattered around the globe to provide a reliable service.
-        </p>
-        <p class="text-sm text-gray font-semibold leading-7 md:text-center">
-          When correctly configured a Status Node supports relaying Waku messages - helps propagate them between nodes
-          - and storing them for devices that were offline when it was sent.
-        </p>
+    <section class="px-6 lg:px-0 lg:pb-35">
+      <div class="flex flex-col pt-20 pb-24 md:flex-row lg:pt-24 lg:pb-14">
+        <div class="mb-10 md:mb-6 lg:mb-0 md:w-4/12 md:pr-4 lg:pl-28">
+          <h2 class="text-2xl text-gray font-semibold max-w-2xl lg:w-40">Running A Status Node</h2>
+        </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:w-8/12 lg:gap-9">
+          <div>
+            <p class="text-sm text-gray font-semibold leading-7 mb-10 md:text-center">
+              Status Node is a modified <span class="text-blue">go-ethereum</span> node called <span class="text-blue">status-go</span> running on a server and supporting the Status app.
+              As we operate in a decentralized model, we need multiple peers scattered around the globe to provide a reliable service.
+            </p>
+          </div>
+          <div>
+            <p class="text-sm text-gray font-semibold leading-7 md:text-center">
+              When correctly configured a Status Node supports relaying Waku messages - helps propagate them between nodes
+              - and storing them for devices that were offline when it was sent.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+
+
+
     <!-- Requirements -->
     <section class="px-6 mb-20 md:px-16 lg:flex lg:px-32 lg:mb-32">
       <div class="mb-6 md:mb-0 lg:max-w-lg">

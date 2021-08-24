@@ -74,6 +74,7 @@ module.exports = {
 			}),
 			margin: theme => ({
 				'25': '6.25rem',
+				'35': '8.725rem',
 			}),
 			width: theme => ({
 				'22r': '22rem',
