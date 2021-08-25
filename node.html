@@ -12,7 +12,7 @@
 <body class="font-body overflow-x-hidden">
 
 <header class="fixed inset-x-0 z-50 bg-white">
-  <div class="h-18 max-w-screen-xl flex justify-between items-center mx-auto px-6 py-4  md:h-26 md:py-8 lg:px-0">
+  <div class="h-18 max-w-screen-xl flex justify-between items-center mx-auto px-6 py-4  md:h-26 md:py-8 xl:px-0">
     <a id="header-logo" class="text-gray" href="/index.html">
       <svg class="w-10 h-10">
         <use href="#logo"/>
@@ -63,9 +63,9 @@
   <!-- Hero -->
   <section class="bg-blue w-screen">
     <div class="relative container max-w-screen-xl mx-auto md:px-16 lg:px-0">
-      <a class="absolute top-4 left-0 hidden text-sm italic underline text-white mt-6 hover:underline lg:no-underline lg:flex lg:items-center" href="javascript:history.back();"><span class="block bg-link-arrow-white bg-left bg-no-repeat w-1.5 h-2 mr-1.5 transform rotate-180"></span>Back</a>
+      <a class="absolute top-4 left-8 hidden text-sm italic underline text-white mt-6 hover:underline lg:no-underline lg:flex lg:items-center xl:left-0" href="javascript:history.back();"><span class="block bg-link-arrow-white bg-left bg-no-repeat w-1.5 h-2 mr-1.5 transform rotate-180"></span>Back</a>
       <div class="flex flex-col px-6 py-20 md:px-0 lg:flex-row lg:py-30">
-        <div class="mb-10 md:mb-6 lg:w-4/12 lg:pl-14 xl:pl-28">
+        <div class="mb-10 md:mb-6 lg:w-4/12 lg:pl-32 xl:pl-16">
           <h1 class="text-2xl text-white font-semibold text-center lg:max-w-2xl lg:text-left">Run a node</h1>
         </div>
         <div class="lg:w-8/12">
@@ -78,9 +78,9 @@
   </section>
   <div class="container max-w-screen-xl mx-auto">
     <!-- Types of nodes -->
-    <section class="px-6 md:px-16 lg:px-0">
+    <section class="px-6 md:px-16 lg:px-16 xl:px-0">
       <div class="flex flex-col pt-20 pb-24 border-b-thin border-gray lg:flex-row lg:pt-48 lg:pb-32">
-        <div class="mb-10 md:mb-6 lg:mb-0 lg:w-4/12 md:pr-4 lg:pl-28 lg:pr-0">
+        <div class="mb-10 md:mb-6 lg:mb-0 lg:w-4/12 md:pr-4 lg:pl-16 lg:pr-0">
           <h2 class="text-2xl text-gray text-center font-semibold lg:max-w-2xl lg:text-left">Types of node</h2>
         </div>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:w-8/12 lg:gap-9">
@@ -96,12 +96,12 @@
       </div>
     </section>
     <!-- Running A Status Node -->
-    <section class="px-6 md:px-16 lg:px-0 lg:pb-35 lg:mb-48">
+    <section class="px-6 md:px-16 lg:px-16 lg:pb-35 lg:mb-48 xl:px-0">
       <div class="flex flex-col pt-20 pb-24 lg:flex-row lg:pt-32 lg:pb-14">
-        <div class="mb-10 md:mb-6 lg:mb-0 lg:w-4/12 md:pr-4 lg:pl-28">
+        <div class="mb-10 md:mb-6 lg:mb-0 lg:w-4/12 md:pr-4 lg:pl-16">
           <h2 class="text-2xl text-gray text-center font-semibold lg:max-w-2xl lg:text-left lg:w-40">Running a status node</h2>
         </div>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:w-8/12 lg:gap-x-40 lg:pr-32">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:w-8/12 lg:gap-x-16 lg:pr-24 xl:gap-x-40">
           <div>
             <p class="text-sm text-gray font-semibold leading-7 mb-10 md:text-center">
               Status Node is a modified <span class="text-blue">go-ethereum</span> node called <span class="text-blue">status-go</span> running on a server and supporting the Status app.
@@ -117,9 +117,6 @@
         </div>
       </div>
     </section>
-
-
-
     <!-- Requirements -->
     <section class="px-6 mb-20 md:px-16 lg:flex lg:px-32 lg:mb-32">
       <div class="mb-6 md:mb-0 lg:max-w-lg">
