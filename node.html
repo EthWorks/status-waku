@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./dist/css/styles.css" rel="stylesheet" />
+  <link href="./css/styles.css" rel="stylesheet" />
   <title>Waku</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
-<body class="font-body">
+<body class="font-body overflow-x-hidden">
 
 <header class="fixed inset-x-0 z-50 bg-white">
   <div class="h-18 max-w-screen-xl flex justify-between items-center mx-auto px-6 py-4  md:h-26 md:py-8 lg:px-0">
@@ -59,28 +59,44 @@
   </div>
 </header>
 
-<main>
-  <div class="container max-w-screen-xl mx-auto pt-18 md:pt-26">
-    <!-- Hero -->
-    <section class="relative flex flex-col items-center bg-blue py-8 px-6 md:flex-row md:px-16 md:py-28 lg:px-32 lg:py-36 lg:items-start">
-      <a class="absolute top-4 left-10 hidden text-sm underline italic text-white pl-3 mt-6 hover:underline lg:no-underline lg:flex lg:items-center" href="javascript:history.back();"><span class="block bg-link-arrow-white bg-left bg-no-repeat w-1.5 h-2 mr-1.5 transform rotate-180"></span>Back</a>
-      <div class="mb-10 min-w-max md:mb-0 md:mr-12 lg:mr-32">
-        <svg class="w-48 h-48 text-white">
-          <use href="#logo"/>
-        </svg>
-      </div>
-      <div class="lg:max-w-2xl">
-        <h1 class="font-special font-medium text-white text-center text-2xl mb-6 md:text-3xl md:mb-10 md:text-left">Run a Waku node</h1>
-        <p class="text-base text-white font-semibold">By running your own node you provide additional nodes for the Status community. We encourage anyone to publish the enode addresses of their nodes for others to use. We also recommend running them as a permanent service or a docker container, so that it keeps running after system restart or a runtime node error.</p>
-      </div>
-    </section>
-    <!-- Types of nodes -->
-    <section class="px-6 lg:px-0">
-      <div class="flex flex-col pt-20 pb-24 border-b-thin border-gray md:flex-row lg:pt-24 lg:pb-14">
-        <div class="mb-10 md:mb-6 lg:mb-0 md:w-4/12 md:pr-4 lg:pl-28 lg:pr-0">
-          <h2 class="text-2xl text-gray font-semibold max-w-2xl">Types of node</h2>
+<main class="pt-18 md:pt-26">
+  <!-- Hero -->
+  <section class="bg-blue w-screen">
+    <div class="relative container max-w-screen-xl mx-auto md:px-16 lg:px-0">
+      <a class="absolute top-4 left-0 hidden text-sm italic underline text-white mt-6 hover:underline lg:no-underline lg:flex lg:items-center" href="javascript:history.back();"><span class="block bg-link-arrow-white bg-left bg-no-repeat w-1.5 h-2 mr-1.5 transform rotate-180"></span>Back</a>
+      <div class="flex flex-col px-6 py-20 md:px-0 lg:flex-row lg:py-30">
+        <div class="mb-10 md:mb-6 lg:w-4/12 lg:pl-14 xl:pl-28">
+          <h1 class="text-2xl text-white font-semibold text-center lg:max-w-2xl lg:text-left">Run a node</h1>
         </div>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:w-8/12 lg:gap-9">
+        <div class="lg:w-8/12">
+          <div class="lg:w-3/4">
+            <p class="text-base text-white font-semibold">By running your own node you provide additional nodes for the Status community. We encourage anyone to publish the enode addresses of their nodes for others to use. We also recommend running them as a permanent service or a docker container, so that it keeps running after system restart or a runtime node error.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container max-w-screen-xl mx-auto">
+
+    <!-- Types of nodes -->
+    <section class="px-6 md:px-16 lg:px-0">
+      <div class="flex flex-col pt-20 pb-24 border-b-thin border-gray lg:flex-row lg:pt-48 lg:pb-32">
+        <div class="mb-10 md:mb-6 lg:mb-0 lg:w-4/12 md:pr-4 lg:pl-28 lg:pr-0">
+          <h2 class="text-2xl text-gray text-center font-semibold lg:max-w-2xl lg:text-left">Types of node</h2>
+        </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:w-8/12 lg:gap-9">
           <div>
             <h3 class="text-sm font-semibold text-gray mb-4">relay node</h3>
             <p class="text-sm text-gray leading-7">A regular Waku Node which relays messages between nodes, including mobile or desktop clients.</p>
@@ -93,12 +109,12 @@
       </div>
     </section>
     <!-- Running A Status Node -->
-    <section class="px-6 lg:px-0 lg:pb-35">
-      <div class="flex flex-col pt-20 pb-24 md:flex-row lg:pt-24 lg:pb-14">
-        <div class="mb-10 md:mb-6 lg:mb-0 md:w-4/12 md:pr-4 lg:pl-28">
-          <h2 class="text-2xl text-gray font-semibold max-w-2xl lg:w-40">Running A Status Node</h2>
+    <section class="px-6 md:px-16 lg:px-0 lg:pb-35 lg:mb-48">
+      <div class="flex flex-col pt-20 pb-24 lg:flex-row lg:pt-32 lg:pb-14">
+        <div class="mb-10 md:mb-6 lg:mb-0 lg:w-4/12 md:pr-4 lg:pl-28">
+          <h2 class="text-2xl text-gray text-center font-semibold lg:max-w-2xl lg:text-left lg:w-40">Running a status node</h2>
         </div>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:w-8/12 lg:gap-9">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:w-8/12 lg:gap-x-40 lg:pr-32">
           <div>
             <p class="text-sm text-gray font-semibold leading-7 mb-10 md:text-center">
               Status Node is a modified <span class="text-blue">go-ethereum</span> node called <span class="text-blue">status-go</span> running on a server and supporting the Status app.
@@ -125,7 +141,7 @@
         <p class="text-sm text-gray leading-7 mb-10 text-justify">An alternative would be to use a <span class="text-blue">cloud service provider</span> which would provide you with a public and static IP out of the box in most cases. Using a cloud service would also provide you with the high uptime necessary to collect as many envelopes as possible for later retrieval.</p>
         <p class="text-sm text-gray font-semibold leading-7 text-justify">A single instance with 1GB of RAM and 1 vCPU should be enough to run Status Node reliably.</p>
       </div>
-      <div class="md:px-11 lg:px-0 lg:pl-14 lg:max-w-xl">
+      <div class="mt-6 md:px-11 lg:px-0 lg:pl-14 lg:max-w-xl">
         <div class="bg-gray px-4 py-6 md:p-8 lg:py-12">
           <p class="text-sm text-white mb-2.5 leading-9">
             In terms of software the minimum would include <span class="inline-block bg-black py-1 px-2 rounded leading-none">make</span> and <span class="inline-block bg-black py-1 px-2 rounded leading-none">jq</span>.<br>
