@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
-<body class="font-body">
+<body class="font-body overflow-x-hidden">
 <header class="fixed inset-x-0 z-50 bg-white">
-  <div class="h-18 max-w-screen-xl flex justify-between items-center mx-auto px-6 py-4  md:h-26 md:py-8 lg:px-0">
+  <div class="h-18 max-w-screen-xl flex justify-between items-center mx-auto px-6 py-4 md:h-26 md:py-8 xl:px-0">
     <a id="header-logo" class="text-gray" href="/index.html">
       <svg class="w-10 h-10">
         <use href="#logo"/>
@@ -57,26 +57,32 @@
     </div>
   </div>
 </header>
-<main>
-  <div class="container max-w-screen-xl mx-auto pt-18 md:pt-26">
-    <!-- Hero -->
-    <section class="relative flex flex-col items-center bg-green py-8 px-6 md:flex-row md:px-16 md:py-28 lg:px-32 lg:py-36 lg:items-start">
-      <a class="absolute top-4 left-10 hidden text-sm underline italic text-white pl-3 mt-6 hover:underline lg:no-underline lg:flex lg:items-center" href="javascript:history.back();"><span class="block bg-link-arrow-white bg-left bg-no-repeat w-1.5 h-2 mr-1.5 transform rotate-180"></span>Back</a>
-      <div class="mb-10 min-w-max md:mb-0 md:mr-12 lg:mr-32">
-        <svg class="w-48 h-48 text-white">
-          <use href="#logo"/>
-        </svg>
+<main class="pt-18 md:pt-26">
+  <!-- Hero -->
+  <section class="bg-green w-screen">
+    <div class="relative container max-w-screen-xl mx-auto md:px-16 lg:px-0">
+      <a class="absolute top-4 left-8 hidden text-sm italic underline text-white mt-6 hover:underline lg:no-underline lg:flex lg:items-center xl:left-0" href="javascript:history.back();"><span class="block bg-link-arrow-white bg-left bg-no-repeat w-1.5 h-2 mr-1.5 transform rotate-180"></span>Back</a>
+      <div class="flex flex-col px-6 py-20 lg:pt-30 lg:pb-56 md:px-0 lg:flex-row">
+        <div class="mb-10 md:mb-6 lg:w-4/12 lg:pl-32">
+          <h1 class="text-2xl text-white font-semibold text-center lg:max-w-2xl lg:text-left">Blog</h1>
+        </div>
+        <div class="lg:w-8/12">
+          <div class="lg:w-3/4">
+            <p class="text-base text-white font-semibold">We take inspiration from core internet architecture, existing survey work and other efforts that have been done to decompose the problem into orthogonal pieces.</p>
+          </div>
+        </div>
       </div>
-      <div class="lg:max-w-2xl">
-        <h1 class="font-special font-medium text-white text-center text-2xl mb-6 md:text-3xl md:mb-10 md:text-left">Blog</h1>
-        <p class="text-base text-white font-semibold">We take inspiration from core internet architecture, existing survey work and other efforts that have been done to decompose the problem into orthogonal pieces.</p>
-      </div>
-    </section>
+    </div>
+  </section>
+
+
+
+  <div class="container max-w-screen-xl mx-auto">
     <!-- Blog entries -->
     <section class="px-6 mt-10 md:px-16 md:mt-20 lg:px-16 lg:mt-32 xl:px-0">
       <div class="pb-10 md:pb-20 lg:flex lg:px-16 lg:pb-32 xl:px-32">
         <div class="mb-10 md:mb-6 lg:mb-0 lg:w-1/5 lg:flex">
-          <h2 class="font-special font-semibold leading-10 text-2xl text-center lg:text-left">Blog entries</h2>
+          <h2 class="gufont-semibold leading-10 text-2xl text-center lg:text-left">Blog entries</h2>
         </div>
         <div class="lg:w-4/5 lg:pl-6 xl:pl-0">
           <div class="grid grid-cols-1 gap-y-10 md:pl-3 md:grid-cols-2 md:gap-x-2 lg:gap-x-6">
