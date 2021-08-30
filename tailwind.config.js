@@ -59,6 +59,7 @@ module.exports = {
 			}),
 			maxWidth: theme => ({
 				'14-5r': '14.5rem',
+				'15r': '15rem',
 				'22r': '22rem',
 				'34r': '34rem',
 			}),
@@ -79,6 +80,7 @@ module.exports = {
 			width: theme => ({
 				'22r': '22rem',
 				'34r': '34rem',
+				'footer-input': 'calc(100% - 76px)'
 			}),
 			zIndex: {
 				'-1':'-1',
