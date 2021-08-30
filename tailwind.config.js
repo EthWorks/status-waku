@@ -56,6 +56,7 @@ module.exports = {
 			height: theme => ({
 				'18': '4.5rem',
 				'26': '6.5rem',
+				'98': '24.5rem',
 			}),
 			maxWidth: theme => ({
 				'14-5r': '14.5rem',
