@@ -1,20 +1,21 @@
 const { watch, series, src, dest } = require("gulp");
 var browserSync = require("browser-sync").create();
+const concat = require('gulp-concat');
 var postcss = require("gulp-postcss");
 const imagemin = require("gulp-imagemin");
 const uglify = require('gulp-uglify-es').default;
 
-// Task for compiling our CSS files using PostCSS
 function cssTask(cb) {
-	return src("./src/*.css") // read .css files from ./src/ folder
-		.pipe(postcss()) // compile using postcss
-		.pipe(dest("./dist/css")) // paste them in ./dist/css folder
+	return src("./src/css/*.css")
+		.pipe(postcss())
+		.pipe(concat('style.min.css'))
+		.pipe(dest("./src/css"))
 		.pipe(browserSync.stream());
 	cb();
 }
 
 function scriptsTask(cb) {
-	return src('./src/*.js')
+	return src('./src/js/*.js')
 		.pipe(uglify())
 		.pipe(dest('./dist/js'))
 		.pipe(browserSync.stream());
@@ -23,22 +24,22 @@ function scriptsTask(cb) {
 
 // Task for minifying images
 function imageminTask(cb) {
-	return src('./img/**/*')
+	return src("./src/assets/images/**/*")
 		.pipe(imagemin())
-		.pipe(dest("./dist/img"));
+		.pipe(dest("./dist/assets/images"));
 	cb();
 }
 
 function htmlBuild(cb) {
-	return src("./*.html") // read .css files from ./src/ folder
-		.pipe(dest("./dist")) // paste them in ./dist/css folder
+	return src("./src/*.html")
+		.pipe(dest("./dist"))
 	cb();
 }
 
 function browsersyncServe(cb) {
 	browserSync.init({
 		server: {
-			baseDir: "./",
+			baseDir: "src/",
 		},
 	});
 	cb();
@@ -51,14 +52,22 @@ function browsersyncReload(cb) {
 
 // Watch Files & Reload browser after tasks
 function watchTask() {
-	watch("./**/*.html", browsersyncReload);
-	watch(["./src/*.css"], series(cssTask, browsersyncReload));
-	watch(["./src/*.js"], series(scriptsTask, browsersyncReload));
+	watch("./src/**/*.html", browsersyncReload);
+	watch(["./src/css/*.css"], series(cssTask, browsersyncReload));
+	watch(["./src/js/*.js"], series(scriptsTask, browsersyncReload));
 }
 
-// Default Gulp Task
-exports.build = series(cssTask, scriptsTask, imageminTask, htmlBuild);
-exports.default = series(cssTask, scriptsTask, imageminTask, htmlBuild, browsersyncServe, watchTask);
+function build() {
+	return src([
+		'src/css/style.min.css',
+		'src/assets/images/**/*',
+		'src/js/main.js',
+		'src/**/*.html ',
+	], {base: 'src'})
+		.pipe(dest('dist'))
+}
+
+exports.build = series(build);
+exports.default = series(cssTask, scriptsTask, htmlBuild, browsersyncServe, watchTask);
 exports.css = cssTask;
 exports.images = imageminTask;
-

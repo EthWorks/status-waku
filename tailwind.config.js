@@ -35,12 +35,12 @@ module.exports = {
 		},
 		extend: {
 			backgroundImage: theme => ({
-				'link-arrow-black': "url('../img/arrow/arrow-black.svg')",
-				'link-arrow-blue': "url('../img/arrow/arrow-blue.svg')",
-				'link-arrow-white': "url('../img/arrow/arrow-white.svg')",
-				'branch': "url('../img/branch.svg')",
-				'eye-open-black': "url('../img/icon/eye-open-black.svg')",
-				'eye-close-white': "url('../img/icon/eye-close-white.svg')",
+				'link-arrow-black': "url('../assets/images/arrow/arrow-black.svg')",
+				'link-arrow-blue': "url('../assets/images/arrow/arrow-blue.svg')",
+				'link-arrow-white': "url('../assets/images/arrow/arrow-white.svg')",
+				'branch': "url('../assets/images/branch.svg')",
+				'eye-open-black': "url('../assets/images/icon/eye-open-black.svg')",
+				'eye-close-white': "url('../assets/images/icon/eye-close-white.svg')",
 			}),
 			borderWidth: theme => ({
 				'thin': '.25px',
